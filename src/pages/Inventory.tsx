@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import { ScrollArea } from "@/components/ui/scroll-area";
-import { Car, Wrench, CalendarCheck, ShieldCheck, Truck, Engine, Gauge, Weight, Power } from "lucide-react";
+import { Car, Wrench, CalendarCheck, ShieldCheck, Truck, Gauge, Weight, Power } from "lucide-react";
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog";
 
 const cars = [
@@ -277,7 +277,7 @@ const Inventory = () => {
               </div>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-gray-600">
                 <div className="flex items-center gap-2">
-                  <Engine className="w-5 h-5 text-secondary" />
+                  <Car className="w-5 h-5 text-secondary" />
                   <span>Двигатель: {selectedCar.specs.engine}</span>
                 </div>
                 <div className="flex items-center gap-2">
