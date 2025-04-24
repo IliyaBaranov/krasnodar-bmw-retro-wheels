@@ -10,7 +10,7 @@ const cars = [
     name: "BMW E30 M3",
     year: 1988,
     price: "₽2,500,000",
-    image: "https://images.unsplash.com/photo-1488590528505-98d2b5aba04b",
+    image: "public/images/BMW_E30_M3.jpg",
     specs: {
       engine: "2.3L I4 S14",
       power: "195 л.с.",
@@ -27,7 +27,7 @@ const cars = [
     name: "BMW E36 M3",
     year: 1995,
     price: "₽1,800,000",
-    image: "https://images.unsplash.com/photo-1531297484001-80022131f5a1",
+    image: "public/images/BMW_E36_M3.jpg",
     specs: {
       engine: "3.0L I6 S50",
       power: "286 л.с.",
@@ -44,7 +44,7 @@ const cars = [
     name: "BMW E39 M5",
     year: 1999,
     price: "₽2,200,000",
-    image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f",
+    image: "public/images/BMW_E39_M5.jpg",
     specs: {
       engine: "4.9L V8 S62",
       power: "400 л.с.",
@@ -61,7 +61,7 @@ const cars = [
     name: "BMW E46 M3",
     year: 2002,
     price: "₽1,950,000",
-    image: "https://images.unsplash.com/photo-1483058712412-4245e9b90334",
+    image: "public/images/BMW_E46_M3.jpg",
     specs: {
       engine: "3.2L I6 S54",
       power: "343 л.с.",
@@ -78,7 +78,7 @@ const cars = [
     name: "BMW E38 750iL",
     year: 1997,
     price: "₽2,800,000",
-    image: "https://images.unsplash.com/photo-1487958449943-2429e8be8625",
+    image: "public/images/BMW_E38_750iL.jpg",
     specs: {
       engine: "5.4L V12 M73",
       power: "326 л.с.",
@@ -95,7 +95,7 @@ const cars = [
     name: "BMW E31 850CSi",
     year: 1994,
     price: "₽3,500,000",
-    image: "https://images.unsplash.com/photo-1518005020951-eccb494ad742",
+    image: "public/images/BMW_E31_850CSi.jpg",
     specs: {
       engine: "5.6L V12 S70",
       power: "380 л.с.",
@@ -112,7 +112,7 @@ const cars = [
     name: "BMW E34 M5",
     year: 1991,
     price: "₽2,100,000",
-    image: "https://images.unsplash.com/photo-1496307653780-42ee777d4833",
+    image: "public/images/BMW_E34_M5.jpg",
     specs: {
       engine: "3.6L I6 S38",
       power: "315 л.с.",
@@ -129,7 +129,7 @@ const cars = [
     name: "BMW E28 M5",
     year: 1986,
     price: "₽2,900,000",
-    image: "https://images.unsplash.com/photo-1459767129954-1b1c1f9b9ace",
+    image: "public/images/BMW_E28_M5.jpg",
     specs: {
       engine: "3.5L I6 M88/3",
       power: "286 л.с.",
@@ -308,12 +308,6 @@ const Inventory = () => {
                   <Car className="w-5 h-5 text-secondary" />
                   <span>Привод: {selectedCar.specs.drivetrain}</span>
                 </div>
-              </div>
-              <div className="mt-6 flex justify-between items-center">
-                <p className="text-2xl font-bold text-secondary">{selectedCar.price}</p>
-                <button className="btn-animate bg-primary text-secondary px-6 py-3 rounded-md font-semibold">
-                  Связаться с менеджером
-                </button>
               </div>
             </div>
           )}

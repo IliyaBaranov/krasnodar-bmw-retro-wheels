@@ -1,6 +1,7 @@
 
 import React from 'react';
 import { Link, useLocation } from 'react-router-dom';
+import { FaVk, FaTelegramPlane, FaYoutube } from 'react-icons/fa';
 
 const Header = () => {
   const location = useLocation();
@@ -26,16 +27,30 @@ const Header = () => {
             Наличие авто
           </Link>
         </div>
-        
         <div className="flex gap-4">
-          <a href="https://vk.com" target="_blank" rel="noopener noreferrer" className="btn-animate">
-            VK
+          <a
+            href="https://vk.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-black hover:text-blue-950 transition-colors text-2xl"
+          >
+            <FaVk />
           </a>
-          <a href="https://telegram.org" target="_blank" rel="noopener noreferrer" className="btn-animate">
-            TG
+          <a
+            href="https://telegram.org"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-black hover:text-blue-950 transition-colors text-2xl"
+          >
+            <FaTelegramPlane />
           </a>
-          <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" className="btn-animate">
-            YT
+          <a
+            href="https://youtube.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-black hover:text-blue-950 transition-colors text-2xl"
+          >
+            <FaYoutube />
           </a>
         </div>
       </nav>
