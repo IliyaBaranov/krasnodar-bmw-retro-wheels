@@ -1,7 +1,7 @@
-
 import React from 'react';
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import { ScrollArea } from "@/components/ui/scroll-area";
+import { Car, Wrench, CalendarCheck, ShieldCheck, Truck, Phone } from "lucide-react";
 
 const cars = [
   {
@@ -62,12 +62,65 @@ const cars = [
   }
 ];
 
+const services = [
+  {
+    title: "Продажа автомобилей с пробегом",
+    icon: <Car className="w-6 h-6" />,
+    items: [
+      "Сертифицированные автомобили с пройденной многоступенчатой проверкой",
+      "Гарантия на подержанные автомобили",
+      "Возможность срочного выкупа вашего автомобиля"
+    ]
+  },
+  {
+    title: "Сервисное обслуживание и ремонт",
+    icon: <Wrench className="w-6 h-6" />,
+    items: [
+      "Плановое ТО по регламенту производителя",
+      "Диагностика (электронная, компьютерная, механическая)",
+      "Кузовной ремонт и покраска с применением оригинальных красок BMW",
+      "Ремонт ходовой части, тормозной системы, коробки передач, двигателя",
+      "Шиномонтаж, балансировка и хранение летних/зимних шин"
+    ]
+  },
+  {
+    title: "Дополнительное оборудование",
+    icon: <ShieldCheck className="w-6 h-6" />,
+    items: [
+      "Установка дополнительного оборудования и аксессуаров",
+      "Оригинальные аксессуары BMW",
+      "Специальные опции",
+      "Установка охранных систем и спутниковых трекеров"
+    ]
+  },
+  {
+    title: "Постпродажное обслуживание",
+    icon: <CalendarCheck className="w-6 h-6" />,
+    items: [
+      "Расширенные программы гарантии",
+      "Сервис BMW Service Inclusive",
+      "Сервис лояльности и персонального менеджера",
+      "Программа помощи на дороге BMW Roadside Assistance"
+    ]
+  },
+  {
+    title: "Дополнительные услуги",
+    icon: <Truck className="w-6 h-6" />,
+    items: [
+      "Страхование (КАСКО, ОСАГО) через партнеров дилера",
+      "Оформление регистрационных документов и номеров",
+      "Утилизация старого автомобиля",
+      "Трансфер и доставка автомобиля к клиенту"
+    ]
+  }
+];
+
 const Inventory = () => {
   return (
     <main className="container mx-auto py-8 px-4">
       <h1 className="text-4xl font-bold mb-8 text-secondary">Наличие автомобилей</h1>
       <ScrollArea className="h-[calc(100vh-12rem)]">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 mb-16">
           {cars.map((car) => (
             <Card key={car.id} className="overflow-hidden hover:shadow-lg transition-shadow">
               <CardHeader className="p-0">
@@ -92,6 +145,31 @@ const Inventory = () => {
             </Card>
           ))}
         </div>
+
+        <section className="mt-16 mb-8">
+          <h2 className="text-3xl font-bold mb-12 text-secondary text-center">Наши услуги</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {services.map((service, index) => (
+              <Card key={index} className="hover:shadow-lg transition-shadow">
+                <CardHeader>
+                  <div className="flex items-center gap-3 mb-4">
+                    <div className="p-2 bg-primary rounded-full">
+                      {service.icon}
+                    </div>
+                    <CardTitle className="text-xl">{service.title}</CardTitle>
+                  </div>
+                </CardHeader>
+                <CardContent>
+                  <ul className="list-disc list-inside space-y-2 text-gray-600">
+                    {service.items.map((item, idx) => (
+                      <li key={idx} className="leading-relaxed">{item}</li>
+                    ))}
+                  </ul>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+        </section>
       </ScrollArea>
     </main>
   );
